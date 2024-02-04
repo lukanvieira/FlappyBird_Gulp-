@@ -80,7 +80,8 @@ body {
     height: 700px;
     width: 1200px;
     margin: 15px;
-    background-color: deepskyblue;
+    /* background-color: deepskyblue; */
+    background-image: url('../imgs/landscape2.png');
     overflow: hidden;
 }
 
