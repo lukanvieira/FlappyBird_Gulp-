@@ -129,6 +129,13 @@ function colidiu(passaro, barreiras) {
     return colidiu
 }
 
+function lost(temp) {
+    const zone = document.querySelector('[game-zone]')
+    zone.style.border = '5px solid darkred'
+    alert('You lost! Press F5 to try again.')
+    clearInterval(temp)
+}
+
 function FlappyBird() {
     let pontos = 0
 
@@ -152,8 +159,9 @@ function FlappyBird() {
             barreiras.animar()
             passaro.animar()
 
-            if (colidiu(passaro, barreiras)){
-                clearInterval(temporizador)
+            if (colidiu(passaro, barreiras)) {
+                lost(temporizador)
+                // clearInterval(temporizador)
             }
         }, 20)
     }
